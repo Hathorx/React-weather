@@ -11,8 +11,12 @@ class GetWeather extends Component {
 
   render() {
     return (
-      <div>
-        <p>Test</p>
+      <div className="get-weather">
+        <h4>Get Weather</h4>
+        <label>
+          <input placeholder="Enter City Name"/>
+        </label>
+        <button>Get Weather</button>
       </div>
     )
   }
@@ -20,7 +24,7 @@ class GetWeather extends Component {
 
 function mapStateToProps(state) {
   return {
-    
+
   }
 }
 
