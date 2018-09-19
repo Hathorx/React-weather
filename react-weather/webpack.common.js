@@ -32,7 +32,9 @@ module.exports = {
       reducers: 'app/reducers/reducers.jsx',
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
-      GetWeather: 'app/components/get-weather/GetWeather.jsx'
+      GetWeather: 'app/components/get-weather/GetWeather.jsx',
+      About: 'app/components/about/About.jsx',
+      Examples: 'app/components/examples/Examples.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

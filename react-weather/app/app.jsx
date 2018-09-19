@@ -9,6 +9,8 @@ import megalitheAdmin from 'reducers'
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import GetWeather from 'GetWeather';
+import About from 'About';
+import Examples from 'Examples';
 
 // Load Foundation
 $(document).foundation();
@@ -28,6 +30,8 @@ render(
       <Route path="/" component={Main}>
         <IndexRoute component={GetWeather}/>
       </Route>
+      <Route path="/about" component={About}/>
+      <Route path="/examples" component={Examples}/>
     </Router>
   </Provider>,
   document.getElementById('app')
