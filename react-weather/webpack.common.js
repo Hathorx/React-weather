@@ -30,7 +30,9 @@ module.exports = {
     alias: {
       applicationStyles: 'app/styles/app.scss',
       reducers: 'app/reducers/reducers.jsx',
-      Main: 'app/components/Main.jsx'
+      Main: 'app/components/Main.jsx',
+      Nav: 'app/components/Nav.jsx',
+      GetWeather: 'app/components/get-weather/GetWeather.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

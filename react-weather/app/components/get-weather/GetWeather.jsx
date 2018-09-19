@@ -1,30 +1,27 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Nav from 'Nav';
+var {Link, IndexLink, browserHistory} = require('react-router');
 
-class Main extends Component {
+class GetWeather extends Component {
   constructor() {
     super();
     this.state = {
     };
   }
-  render () {
 
+  render() {
     return (
       <div>
-        <Nav/>
-        {this.props.children}
+        <p>Test</p>
       </div>
     )
   }
-
 }
-
 
 function mapStateToProps(state) {
   return {
-
+    
   }
-};
+}
 
-export default connect(mapStateToProps) (Main);
+export default connect(mapStateToProps)(GetWeather);
