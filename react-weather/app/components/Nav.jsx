@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-var {Link, IndexLink, browserHistory} = require('react-router');
+var {browserHistory} = require('react-router');
 
 export default class Nav extends Component {
   constructor() {
@@ -14,17 +14,17 @@ export default class Nav extends Component {
         <header className="top-bar nav">
           <div className="top-bar-left">
           <ul className="menu style">
-            <li>
+            <li onClick={() => browserHistory.push('/')}>
               <a>
                 Get Weather
               </a>
             </li>
-            <li>
+            <li onClick={() => browserHistory.push('/about')}>
               <a>
                 About
               </a>
             </li>
-            <li>
+            <li onClick={() => browserHistory.push('/examples')}>
               <a>
                 Examples
               </a>

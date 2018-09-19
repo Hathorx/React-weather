@@ -5,7 +5,7 @@ var {Route, Router, IndexRoute, browserHistory} = require('react-router')
 import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 import Main from 'Main';
-import megalitheAdmin from 'reducers'
+import getWeatherApp from 'reducers'
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import GetWeather from 'GetWeather';
@@ -20,7 +20,7 @@ require('style!css!sass!applicationStyles')
 
 let createStoreWithMiddleware = applyMiddleware(thunkMiddleware) (createStore);
 //
-let store = createStoreWithMiddleware(megalitheAdmin, redux.compose(
+let store = createStoreWithMiddleware(getWeatherApp, redux.compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f,
 ))
 
@@ -28,10 +28,10 @@ render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={Main}>
+        <Route path="/about" component={About}/>
+        <Route path="/examples" component={Examples}/>
         <IndexRoute component={GetWeather}/>
       </Route>
-      <Route path="/about" component={About}/>
-      <Route path="/examples" component={Examples}/>
     </Router>
   </Provider>,
   document.getElementById('app')

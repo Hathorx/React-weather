@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 var {Link, IndexLink, browserHistory} = require('react-router');
+import {sendWeatherData} from 'Actions';
 
 class GetWeather extends Component {
   constructor() {
     super();
     this.state = {
     };
+
+    this.sendInformation = this.sendInformation.bind(this);
   }
 
   render() {
@@ -14,17 +17,41 @@ class GetWeather extends Component {
       <div className="get-weather">
         <h4>Get Weather</h4>
         <label>
-          <input placeholder="Enter City Name"/>
+          <input ref="city" placeholder="Enter City Name"/>
         </label>
-        <button>Get Weather</button>
+        <button onClick={() => this.sendInformation(this.refs.city.value)}>Get Weather</button>
+        { this.props.name ?
+            this.props.name
+          :
+            ''
+        }
+
+        { this.props.temp ?
+            this.props.temp
+          :
+            ''
+        }
       </div>
     )
   }
+
+  sendInformation(a) {
+    console.log(a, "test")
+    if (a.lenght != 0) {
+      this.props.dispatch(sendWeatherData(a))
+    }
+  }
 }
 
-function mapStateToProps(state) {
-  return {
 
+function mapStateToProps(state) {
+  const {weather} = state;
+  const {name, temp, error, isFetching} = weather;
+  return {
+    name,
+    temp,
+    error,
+    isFetching
   }
 }
 
