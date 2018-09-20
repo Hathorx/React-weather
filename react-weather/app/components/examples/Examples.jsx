@@ -16,10 +16,10 @@ class Examples extends Component {
         <p>Here are a few example locations to try out:</p>
         <ol>
           <li>
-            <a>Lille</a>
+            <Link to = "/">Lille</Link>
           </li>
           <li>
-            <a>Rio, Brazil</a>
+            <Link to = "/">Rio, Brazil</Link>
           </li>
         </ol>
       </div>

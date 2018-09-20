@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {SEND_INFORMATION_WEATHER} from 'Actions';
+import {SEND_INFORMATION_WEATHER, SEND_ERROR_MESSAGE, SEND_LOADING} from 'Actions';
 
 export function auth (state = {
   isFetching: false,
@@ -26,6 +26,20 @@ export function weather(state = {
         temp: action.temp,
         error: 0,
         isFetching: 0
+      })
+    case SEND_ERROR_MESSAGE:
+      return Object.assign({}, state, {
+        error: 1,
+        isFetching: 0,
+        name: null,
+        temp: null
+      })
+    case SEND_LOADING:
+      return Object.assign({}, state, {
+        error: 0,
+        isFetching: 1,
+        name: action.name,
+        temp: action.temp
       })
     default:
       return state

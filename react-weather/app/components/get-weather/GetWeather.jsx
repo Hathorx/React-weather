@@ -21,13 +21,25 @@ class GetWeather extends Component {
         </label>
         <button onClick={() => this.sendInformation(this.refs.city.value)}>Get Weather</button>
         { this.props.name ?
-            this.props.name
+            <p>Dans la ville de {this.props.name}</p>
           :
             ''
         }
 
         { this.props.temp ?
-            this.props.temp
+            <p>il fait {this.props.temp} °C</p>
+          :
+            ''
+        }
+
+        { this.props.error ?
+            <p>La ville que vous recherchez n'existe pas</p>
+          :
+            ''
+        }
+
+        { this.props.isFetching ?
+            <img src={require('../../../img/Rolling-1s-200px.svg')}/>
           :
             ''
         }

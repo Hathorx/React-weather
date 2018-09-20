@@ -1,0 +1,38 @@
+.about {
+  width: 53%;
+  margin-right: auto;
+  margin-left: auto;
+
+  h3 {
+    color: #555;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  ul {
+    li:nth-of-type(1) {
+      margin-bottom: 16px;
+      a {
+        float: left;
+        padding-right: 5px;
+      }
+
+      p {
+        float: left;
+      }
+    }
+
+    li:nth-of-type(2) {
+      a {
+        float: left;
+        padding-right: 5px;
+      }
+
+      p {
+        float: left;
+      }
+    }
+  }
+}
