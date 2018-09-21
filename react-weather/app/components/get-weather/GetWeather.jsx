@@ -22,18 +22,13 @@ class GetWeather extends Component {
         </label>
         <button onClick={() => this.sendInformation(this.refs.city.value)}>Get Weather</button>
 
-        { this.props.name || this.props.temp || this.props.error ?
+        { this.props.name || this.props.temp || this.props.error || this.props.isFetching ?
             <GetWeatherResponse
               name={this.props.name}
               temp={this.props.temp}
               error={this.props.error}
+              isFetching={this.props.isFetching}
             />
-          :
-            ''
-        }
-
-        { this.props.isFetching ?
-            <img src={require('../../../img/Rolling-1s-200px.svg')}/>
           :
             ''
         }
@@ -48,7 +43,6 @@ class GetWeather extends Component {
     }
   }
 }
-
 
 function mapStateToProps(state) {
   const {weather} = state;

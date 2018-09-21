@@ -36,7 +36,9 @@ module.exports = {
       GetWeather: 'app/components/get-weather/GetWeather.jsx',
       About: 'app/components/about/About.jsx',
       Examples: 'app/components/examples/Examples.jsx',
-      GetWeatherResponse: 'app/components/get-weather/GetWeatherResponse.jsx'
+      GetWeatherResponse: 'app/components/get-weather/GetWeatherResponse.jsx',
+      Carbon: 'app/components/carbon/Carbon.jsx',
+      CarbonResponse: 'app/components/carbon/CarbonResponse.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

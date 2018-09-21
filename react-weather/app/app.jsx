@@ -11,6 +11,7 @@ import {Provider} from 'react-redux';
 import GetWeather from 'GetWeather';
 import About from 'About';
 import Examples from 'Examples';
+import Carbon from 'Carbon';
 
 // Load Foundation
 $(document).foundation();
@@ -30,6 +31,7 @@ render(
       <Route path="/" component={Main}>
         <Route path="/about" component={About}/>
         <Route path="/examples" component={Examples}/>
+        <Route path="/carbon" component={Carbon}/>
         <IndexRoute component={GetWeather}/>
       </Route>
     </Router>

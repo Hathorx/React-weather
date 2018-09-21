@@ -1,0 +1,69 @@
+.carbon {
+  text-align: center;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  h4 {
+    color: #555;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  label {
+    text-align: -webkit-center;
+  }
+
+  input {
+    display: block;
+    width: 53%;
+    height: 2.4375rem;
+    padding: .5rem;
+    border: 1px solid #cacaca;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #0a0a0a;
+    background-color: #fefefe;
+    border-radius: 0;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+  }
+
+  button {
+    border: 1px solid #2199e8;
+    color: #2199e8;
+    padding: 0.7rem;
+    width: 53%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  p:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 15%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+
+  >div {
+    p:nth-of-type(1) {
+      width: 20%;
+      display: initial;
+    }
+
+    p:nth-of-type(2) {
+      width: 40%;
+      display: initial;
+    }
+
+    p:nth-of-type(3) {
+      margin-bottom: 0;
+    }
+  }
+}

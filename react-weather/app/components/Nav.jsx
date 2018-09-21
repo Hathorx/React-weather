@@ -33,6 +33,11 @@ export default class Nav extends Component {
                 Examples
               </a>
             </li>
+            <li onClick={() => browserHistory.push('/carbon')}>
+              <a>
+                Location
+              </a>
+            </li>
           </ul>
         </div>
         <div className="top-bar-right">
