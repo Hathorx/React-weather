@@ -12,14 +12,15 @@ class Main extends Component {
 
     return (
       <div>
-        <Nav/>
+        <Nav
+          dispatch={this.props.dispatch}
+          />
         {this.props.children}
       </div>
     )
   }
 
 }
-
 
 function mapStateToProps(state) {
   return {

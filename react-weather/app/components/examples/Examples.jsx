@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {sendWeatherData} from 'Actions';
 var {Link, IndexLink, browserHistory} = require('react-router');
 
 class Examples extends Component {
@@ -7,6 +8,8 @@ class Examples extends Component {
     super();
     this.state = {
     };
+
+    this.sendLink = this.sendLink.bind(this);
   }
 
   render() {
@@ -16,14 +19,21 @@ class Examples extends Component {
         <p>Here are a few example locations to try out:</p>
         <ol>
           <li>
-            <Link to = "/">Lille</Link>
+            <Link to='/' onClick={() => this.sendLink('Lille')}>Lille</Link>
           </li>
           <li>
-            <Link to = "/">Rio, Brazil</Link>
+            <Link to='/' onClick={() => this.sendLink('Rio, Brazil')}>Rio, Brazil</Link>
           </li>
         </ol>
       </div>
     )
+  }
+
+  sendLink(a) {
+    console.log(a, "test")
+    if (a.lenght != 0) {
+      this.props.dispatch(sendWeatherData(a))
+    }
   }
 }
 

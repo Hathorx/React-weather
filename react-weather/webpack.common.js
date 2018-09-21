@@ -35,7 +35,8 @@ module.exports = {
       Actions: 'app/actions/Actions.jsx',
       GetWeather: 'app/components/get-weather/GetWeather.jsx',
       About: 'app/components/about/About.jsx',
-      Examples: 'app/components/examples/Examples.jsx'
+      Examples: 'app/components/examples/Examples.jsx',
+      GetWeatherResponse: 'app/components/get-weather/GetWeatherResponse.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

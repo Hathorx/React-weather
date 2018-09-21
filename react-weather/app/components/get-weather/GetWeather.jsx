@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 var {Link, IndexLink, browserHistory} = require('react-router');
 import {sendWeatherData} from 'Actions';
+import GetWeatherResponse from 'GetWeatherResponse';
 
 class GetWeather extends Component {
   constructor() {
@@ -20,20 +21,13 @@ class GetWeather extends Component {
           <input ref="city" placeholder="Enter City Name"/>
         </label>
         <button onClick={() => this.sendInformation(this.refs.city.value)}>Get Weather</button>
-        { this.props.name ?
-            <p>Dans la ville de {this.props.name}</p>
-          :
-            ''
-        }
 
-        { this.props.temp ?
-            <p>il fait {this.props.temp} °C</p>
-          :
-            ''
-        }
-
-        { this.props.error ?
-            <p>La ville que vous recherchez n'existe pas</p>
+        { this.props.name || this.props.temp || this.props.error ?
+            <GetWeatherResponse
+              name={this.props.name}
+              temp={this.props.temp}
+              error={this.props.error}
+            />
           :
             ''
         }

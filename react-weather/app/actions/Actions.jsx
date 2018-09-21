@@ -37,6 +37,6 @@ export function sendWeatherData(a) {
       }).catch(err => {
         dispatch(sendErrorMessage())
       })
-    }, 1000);
+    }, 500);
 }
 }

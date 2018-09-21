@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {sendWeatherData} from 'Actions';
+import {connect} from 'react-redux';
 var {browserHistory} = require('react-router');
 
 export default class Nav extends Component {
@@ -6,6 +8,8 @@ export default class Nav extends Component {
     super();
     this.state = {
     };
+
+    this.sendWeather = this.sendWeather.bind(this);
   }
 
   render() {
@@ -33,12 +37,19 @@ export default class Nav extends Component {
         </div>
         <div className="top-bar-right">
           <label>
-            <input placeholder="Search weather by city"/>
+            <input ref="weather" placeholder="Search weather by city"/>
           </label>
-          <button>Get Weather</button>
+          <button onClick={() => this.sendWeather(this.refs.weather.value)}>Get Weather</button>
         </div>
         </header>
       </div>
     )
+  }
+  sendWeather(a) {
+    console.log(a, "test")
+    if (a.lenght != 0) {
+      this.props.dispatch(sendWeatherData(a))
+      browserHistory.push('/')
+    }
   }
 }
