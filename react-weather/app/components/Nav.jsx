@@ -12,6 +12,8 @@ export default class Nav extends Component {
     this.sendWeather = this.sendWeather.bind(this);
   }
 
+//--------------------HTML for the NavBar on top of each tab--------------------
+
   render() {
     return (
       <div>
@@ -50,6 +52,9 @@ export default class Nav extends Component {
       </div>
     )
   }
+
+//------------------Function sending the value input to the API-----------------
+
   sendWeather(a) {
     console.log(a, "test")
     if (a.lenght != 0) {

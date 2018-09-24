@@ -9,6 +9,8 @@ class About extends Component {
     };
   }
 
+//---------------------------HTML for the About tab-----------------------------
+
   render() {
     return (
       <div className="about">

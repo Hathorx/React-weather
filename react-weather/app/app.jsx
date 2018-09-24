@@ -25,6 +25,8 @@ let store = createStoreWithMiddleware(getWeatherApp, redux.compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f,
 ))
 
+//-------------------Routes and paths gestion for each tab----------------------
+
 render(
   <Provider store={store}>
     <Router history={browserHistory}>

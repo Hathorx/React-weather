@@ -9,6 +9,8 @@ export default class CarbonResponse extends Component{
     };
   }
 
+//------------------HTML for Location tab after the API request-----------------
+
   render() {
     return (
       <div>

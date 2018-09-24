@@ -8,8 +8,10 @@ class Main extends Component {
     this.state = {
     };
   }
-  render () {
 
+//--------------------------------HTML for the app------------------------------
+
+  render () {
     return (
       <div>
         <Nav

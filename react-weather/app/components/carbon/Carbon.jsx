@@ -13,6 +13,8 @@ class Carbon extends Component {
     this.sendInformation = this.sendInformation.bind(this);
   }
 
+//----------------------------HTML for the Location tab-------------------------
+
   render() {
     return (
       <div className="carbon">
@@ -36,6 +38,9 @@ class Carbon extends Component {
       </div>
     )
   }
+
+//-------------------Function sending input value to the API--------------------
+
   sendInformation(a) {
     console.log(a, "test")
     if (a.lenght != 0) {

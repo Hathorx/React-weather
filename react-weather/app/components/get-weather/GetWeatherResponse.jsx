@@ -9,6 +9,8 @@ export default class GetWeatherResponse extends Component{
     };
   }
 
+//-------------------HTML for GetWeather tab after the API request--------------
+
   render() {
     return (
       <div>

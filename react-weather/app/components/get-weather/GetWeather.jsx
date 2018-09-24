@@ -13,6 +13,8 @@ class GetWeather extends Component {
     this.sendInformation = this.sendInformation.bind(this);
   }
 
+//---------------------------HTML for GetWeather tab----------------------------
+
   render() {
     return (
       <div className="get-weather">
@@ -35,6 +37,8 @@ class GetWeather extends Component {
       </div>
     )
   }
+
+//-------------------------Function sending input value to the API--------------
 
   sendInformation(a) {
     console.log(a, "test")

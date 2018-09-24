@@ -12,6 +12,8 @@ class Examples extends Component {
     this.sendLink = this.sendLink.bind(this);
   }
 
+//-----------------------------HTML for Examples tab----------------------------
+
   render() {
     return (
       <div className="examples">
@@ -28,6 +30,8 @@ class Examples extends Component {
       </div>
     )
   }
+
+//-------------Function sending the value of the Link to the API----------------
 
   sendLink(a) {
     console.log(a, "test")

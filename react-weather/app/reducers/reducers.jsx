@@ -13,6 +13,8 @@ export function auth (state = {
   };
 };
 
+//---------Function for each case after the GetWeather requests to API----------
+
 export function weather(state = {
   name: '',
   temp: null,
@@ -45,6 +47,8 @@ export function weather(state = {
       return state
   }
 }
+
+//----------Function for each case after the Location requests to API-----------
 
 export function location(state = {
   name: '',
@@ -85,6 +89,8 @@ export function location(state = {
       return state
   }
 }
+
+//----------------Function with all the reducers functions----------------------
 
 const getWeatherApp = combineReducers({
   auth,
