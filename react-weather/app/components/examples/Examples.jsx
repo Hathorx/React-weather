@@ -34,7 +34,6 @@ class Examples extends Component {
 //-------------Function sending the value of the Link to the API----------------
 
   sendLink(a) {
-    console.log(a, "test")
     if (a.lenght != 0) {
       this.props.dispatch(sendWeatherData(a))
     }

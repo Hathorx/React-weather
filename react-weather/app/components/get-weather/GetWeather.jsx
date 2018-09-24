@@ -38,10 +38,9 @@ class GetWeather extends Component {
     )
   }
 
-//-------------------------Function sending input value to the API--------------
+//---------------------Function sending input value to the API------------------
 
   sendInformation(a) {
-    console.log(a, "test")
     if (a.lenght != 0) {
       this.props.dispatch(sendWeatherData(a))
     }

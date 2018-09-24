@@ -23,6 +23,7 @@ class Carbon extends Component {
             <input ref="city" placeholder="Enter City Name"/>
           </label>
           <button onClick={() => this.sendInformation(this.refs.city.value)}>Get Location</button>
+
           { this.props.name || this.props.lat || this.props.lon || this.props.error || this.props.isFetching || this.props.temp ?
               <CarbonResponse
                 lat={this.props.lat}
@@ -42,7 +43,6 @@ class Carbon extends Component {
 //-------------------Function sending input value to the API--------------------
 
   sendInformation(a) {
-    console.log(a, "test")
     if (a.lenght != 0) {
       this.props.dispatch(sendWeatherData(a, 1))
     }

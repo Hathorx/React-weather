@@ -56,7 +56,6 @@ export default class Nav extends Component {
 //------------------Function sending the value input to the API-----------------
 
   sendWeather(a) {
-    console.log(a, "test")
     if (a.lenght != 0) {
       this.props.dispatch(sendWeatherData(a))
       browserHistory.push('/')

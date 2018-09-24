@@ -28,7 +28,7 @@ var sendInformationLocation = (creds) => {
   }
 }
 
-//------------Function sending an error message if case of bad input------------
+//------------Function sending an error message in case of bad input------------
 
 var sendErrorMessage = () => {
   return {
